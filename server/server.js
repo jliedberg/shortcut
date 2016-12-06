@@ -12,6 +12,8 @@ import getRoutes from '../src/routes'
 import rootReducer from '../src/reducers'
 import Default from '../src/layouts/Default'
 import { port, apiHost, apiPort } from '../config/env'
+import cookieParser from 'cookie-parser'
+import bodyParser from 'body-parser'
 
 const app = express()
 
@@ -34,7 +36,7 @@ app.use((req, res) => {
   const middleware = routerMiddleware(memoryHistory)
   const store = createStore(rootReducer, preloadedState, applyMiddleware(middleware))
 
-  match({ routes: getRoutes, location: req.originalUrl },
+  match({ routes: getRoutes(), location: req.originalUrl },
   (error, redirectLocation, renderProps) => {
     if (error) {
       console.error('ROUTER ERROR:', pretty.render(error))
