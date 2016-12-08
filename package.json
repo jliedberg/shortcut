@@ -43,12 +43,14 @@
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "mongoose": "^4.7.1",
+    "normalize.css": "^5.0.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
     "react-router-redux": "^4.0.6",
     "redux": "^3.6.0",
+    "sigrid": "^1.0.0",
     "webpack": "^1.13.2",
     "webpack-isomorphic-tools": "^2.5.8"
   }

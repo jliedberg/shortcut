@@ -1,0 +1,34 @@
+@import "~normalize.css";
+@import "~sigrid";
+
+@import "variables";
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: $font__color;
+  background-color: $color__brow-gray;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+.home {
+  color: #fff;
+  padding: 100px 0;
+}
+
+.home__title {
+  color: $color__primary;
+  text-align: center;
+  font-family: 'Menlo';
+}
+
+.clusters {
+  background-color: $color__dark-gray;
+}
+
+.cluster__name {
+  color: #888;
+  font-weight: 400;
+}
