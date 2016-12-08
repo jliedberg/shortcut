@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --verbose --colors --display-error-details --config webpack/prod.config.js",
-    "postinstall": "npm run build",
     "dev": "concurrently --kill-others \"npm run dev-client\" \"npm run dev-server\" \"npm run dev-api\"",
     "dev-client": "NODE_ENV=development babel-node ./webpack/webpack-dev-server.js",
     "dev-server": "NODE_ENV=development nodemon --exec babel-node ./server/index.js",
