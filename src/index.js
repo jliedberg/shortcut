@@ -7,9 +7,7 @@ import { createStore, applyMiddleware } from 'redux'
 import rootReducer from './reducers'
 import getRoutes from './routes'
 
-import 'normalize.css';
-import 'sigrid';
-import 'styles/main.scss';
+import './styles/main.scss';
 
 const initialState = window.__INITIAL_STATE__
 const middleware = routerMiddleware(browserHistory)

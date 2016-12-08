@@ -27,7 +27,7 @@ export default class Default extends React.Component {
             />
           )}
           {/* development */}
-          { Object.keys(assets.styles).length === 0 ? <style dangerouslySetInnerHTML={{__html: require('../containers/App/App.scss')._style}}/> : null }
+          { Object.keys(assets.styles).length === 0 ? <style dangerouslySetInnerHTML={{__html: require('../styles/main.scss')._style}}/> : null }
         </head>
         <body>
           <div id='root' dangerouslySetInnerHTML={{ __html: content }} />
