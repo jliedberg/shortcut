@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         test: /\.(scss|css)$/,
-        loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap'
+        loader: 'style!css?importLoaders=2&sourceMap!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap'
       },
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
