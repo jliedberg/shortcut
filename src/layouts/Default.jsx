@@ -1,17 +1,16 @@
-import React, {PropTypes} from 'react'
+import React, {PropTypes, Component} from 'react'
 import ReactDOM from 'react-dom/server'
 import serialize from 'serialize-javascript'
 import { webpackHost, webpackPort } from '../../config/env'
 
-export default class Default extends React.Component {
+export default class Default extends Component {
   static propTypes = {
     assets: PropTypes.object,
-    component: PropTypes.node,
-    store: PropTypes.object
+    component: PropTypes.node
   }
 
   render() {
-    const { assets, component, store } = this.props
+    const { assets, component } = this.props
     const content = component ? ReactDOM.renderToString(component) : ''
 
     return (
@@ -31,10 +30,6 @@ export default class Default extends React.Component {
         </head>
         <body>
           <div id='root' dangerouslySetInnerHTML={{ __html: content }} />
-          <script
-            dangerouslySetInnerHTML={{ __html: `window.__INITIAL_STATE__=${serialize(store.getState())}` }}
-            charSet='UTF-8'
-          />
           <script src={assets.javascript.main} charSet='UTF-8'/>
         </body>
       </html>
@@ -44,6 +39,5 @@ export default class Default extends React.Component {
 
 Default.propTypes = {
   assets: React.PropTypes.object,
-  component: React.PropTypes.node,
-  store: React.PropTypes.object,
+  component: React.PropTypes.node
 }

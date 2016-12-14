@@ -3,13 +3,8 @@ import path from 'path'
 import PrettyError from 'pretty-error'
 import React from 'react'
 import ReactDOM from 'react-dom/server'
-import { createStore, applyMiddleware } from 'redux'
 import { match, RouterContext } from 'react-router'
-import { routerMiddleware } from 'react-router-redux'
-import createMemoryHistory from 'react-router/lib/createMemoryHistory'
-import { Provider } from 'react-redux'
 import getRoutes from '../src/routes'
-import rootReducer from '../src/reducers'
 import Default from '../src/layouts/Default'
 import { port, apiHost, apiPort } from '../config/env'
 import cookieParser from 'cookie-parser'
@@ -42,18 +37,13 @@ app.use((req, res) => {
     webpackIsomorphicTools.refresh()
   }
 
-  const preloadedState = {}
-  const memoryHistory = createMemoryHistory(req.originalUrl)
-  const middleware = routerMiddleware(memoryHistory)
-  const store = createStore(rootReducer, preloadedState, applyMiddleware(middleware))
-
   match({ routes: getRoutes(), location: req.originalUrl },
   (error, redirectLocation, renderProps) => {
     if (error) {
       console.error('ROUTER ERROR:', pretty.render(error))
       res.status(500).send(`
         <!doctype html>
-          ${ReactDOM.renderToString(<Default assets={webpackIsomorphicTools.assets()} store={store} />)}
+          ${ReactDOM.renderToString(<Default assets={webpackIsomorphicTools.assets()} />)}
       `)
     }
     else if (redirectLocation) {
@@ -61,14 +51,12 @@ app.use((req, res) => {
     }
     else if (renderProps) {
       const component = (
-        <Provider store={store} key="provider">
-          <RouterContext {...renderProps} />
-        </Provider>
+        <RouterContext {...renderProps} />
       )
 
       res.status(200).send(`
         <!doctype html>
-          ${ReactDOM.renderToStaticMarkup(<Default assets={webpackIsomorphicTools.assets()} component={component} store={store} />)}
+          ${ReactDOM.renderToStaticMarkup(<Default assets={webpackIsomorphicTools.assets()} component={component} />)}
       `)
     }
     else {

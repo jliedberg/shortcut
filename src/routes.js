@@ -3,15 +3,17 @@ import { IndexRoute, Route } from 'react-router'
 
 import {
   App,
-  HomeContainer,
   NotFound,
+  ModalContainer
 } from './containers'
 
 export default () => {
   return (
     <Route path="/" component={App}>
-      <IndexRoute component={HomeContainer} />
-      <Route path="*" component={NotFound} status={404} />
+      <Route path=':clusterId/:shortcutId'>
+        <IndexRoute component={ModalContainer} />
+      </Route>
+      <Route path='*' component={NotFound} />
     </Route>
   )
 }

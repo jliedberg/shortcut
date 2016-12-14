@@ -1,3 +1,4 @@
 export App from './App/App'
-export HomeContainer from './Home/HomeContainer'
+export Home from './Home/Home'
 export NotFound from './NotFound/NotFound'
+export ModalContainer from './Modal/ModalContainer'
