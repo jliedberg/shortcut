@@ -1,11 +1,10 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router'
 import SearchInput, {createFilter} from 'react-search-input'
 
-import CLUSTERS from '../../data'
-import Shortcut from '../Shortcut/Shortcut'
-
 const KEYS_TO_FILTERS = ['name', 'shortcuts.desc', 'shortcuts.keys']
+
+import Shortcut from '../Shortcut/Shortcut';
+import CLUSTERS from '../../data';
 
 export default class Home extends Component {
   constructor() {
@@ -15,20 +14,22 @@ export default class Home extends Component {
   }
 
   searchUpdated(term) {
-    this.setState({searchTerm: term})
+    this.setState({searchTerm: term});
   }
 
   render() {
-    const filteredClusters = CLUSTERS.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
-    const clusters = filteredClusters.map(cluster => {
-      const shortcuts = cluster.shortcuts.map(shortcut => {
-        return <Link key={shortcut.id} to={`/${cluster.id}/${shortcut.id}`}><li>{shortcut.keys.join(' + ')} - {shortcut.desc}</li></Link>;
+    const filteredClusters = CLUSTERS.filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS));
+    const clusters = filteredClusters.map((cluster, clusterIndex) => {
+      const shortcuts = cluster.shortcuts.map((shortcut, shortcutIndex) => {
+        return <Shortcut clusterIndex={clusterIndex} shortcut={shortcut} shortcutIndex={shortcutIndex} key={shortcutIndex}/>;
       });
       return (
-        <div className="col col--sm-4" key={this.props.key}>
+        <div className="col col--sm-4" key={clusterIndex}>
           <div className="cluster">
             <h5 className="cluster__name">{cluster.name}</h5>
-            <Shortcut data={shortcuts}/>
+            <ul className="cluster__shortcuts">
+              {shortcuts}
+            </ul>
           </div>
         </div>
       );

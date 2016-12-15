@@ -9,13 +9,7 @@ import Default from '../src/layouts/Default'
 import { port, apiHost, apiPort } from '../config/env'
 import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
-import shortcutResource from './api/shortcutResource';
-import shortcutGroupResource from './api/shortcutGroupResource';
-import connect from './db';
-
 const app = express()
-
-connect();
 
 // middleware ==================================================================
 app.use(cookieParser())
@@ -23,12 +17,6 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 app.use(bodyParser.json())
-
-// API ==================================================================
-
-app.use('/api/shortcuts', shortcutResource.getRoutes());
-app.use('/api/shortcut-groups', shortcutGroupResource.getRoutes());
-
 
 app.use('/', express.static(path.resolve(__dirname, '../public')))
 

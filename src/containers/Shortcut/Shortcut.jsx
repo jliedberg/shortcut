@@ -1,11 +1,16 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router'
+
+import Keys from '../Keys';
 
 export default class Shortcut extends Component {
   render() {
     return (
-      <ul className="cluster__shortcuts">
-        {this.props.data}
-      </ul>
+      <li>
+        <Link to={`/${this.props.clusterIndex}/${this.props.shortcutIndex}`}>
+          <Keys keys={this.props.shortcut.keys}/> - {this.props.shortcut.desc}
+        </Link>
+      </li>
     )
   }
 }
