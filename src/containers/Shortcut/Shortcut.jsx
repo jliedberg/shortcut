@@ -7,7 +7,7 @@ export default class Shortcut extends Component {
   render() {
     return (
       <li>
-        <Link to={`/${this.props.clusterIndex}/${this.props.shortcutIndex}`} className="cluster__shortcut">
+        <Link to={`/${this.props.cluster.id}/${this.props.shortcut.id}`} className="cluster__shortcut">
           <Keys keys={this.props.shortcut.keys}/> - {this.props.shortcut.desc}
         </Link>
       </li>
