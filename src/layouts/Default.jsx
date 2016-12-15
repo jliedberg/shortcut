@@ -1,6 +1,7 @@
 import React, {PropTypes, Component} from 'react'
 import ReactDOM from 'react-dom/server'
 import serialize from 'serialize-javascript'
+import gtmParts from 'react-google-tag-manager';
 import { webpackHost, webpackPort } from '../../config/env'
 
 export default class Default extends Component {
@@ -10,6 +11,10 @@ export default class Default extends Component {
   }
 
   render() {
+    const gtm = gtmParts({
+      id: 'GTM-K4MC6DC',
+      dataLayerName: this.props.dataLayerName || 'dataLayer'
+    });
     const { assets, component } = this.props
     const content = component ? ReactDOM.renderToString(component) : ''
 
@@ -25,10 +30,11 @@ export default class Default extends Component {
               rel='stylesheet' type='text/css' charSet='UTF-8'
             />
           )}
-          {/* development */}
           { Object.keys(assets.styles).length === 0 ? <style dangerouslySetInnerHTML={{__html: require('../styles/main.scss')._style}}/> : null }
         </head>
         <body>
+          <div>{gtm.noScriptAsReact()}</div>
+          <div>{gtm.scriptAsReact()}</div>
           <div id='root' dangerouslySetInnerHTML={{ __html: content }} />
           <script src={assets.javascript.main} charSet='UTF-8'/>
         </body>
