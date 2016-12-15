@@ -10,11 +10,21 @@ export default class Modal extends Component {
       .toLowerCase();
     return (
       <div className='modal'>
-        <h1><Keys keys={this.props.data.keys}/></h1>
-        <h3>{this.props.data.desc}</h3>
-        <video autoPlay loop>
-          <source src={`/videos/${videoName}.mp4`} type="video/mp4"/>
-        </video>
+        <div className='row row--center row--full-height'>
+          <div className='col col--sm-5 text__container'>
+            <div className='text__inner'>
+              <Keys keys={this.props.data.keys}/>
+              <span className='purpose'>{this.props.data.desc}</span>
+            </div>
+          </div>
+          <div className='col col--sm-7 video__container'>
+            <div className='video__inner'>
+              <video autoPlay loop>
+                <source src={`/videos/${videoName}.mp4`} type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

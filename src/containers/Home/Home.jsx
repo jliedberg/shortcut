@@ -76,7 +76,7 @@ export default class Home extends Component {
       return (
         <div className="col col--sm-4" key={cluster.id}>
           <div className="cluster">
-            <h5 className="cluster__name">{cluster.name}</h5>
+            <h3 className="cluster__name">{cluster.name}</h3>
             <ul className="cluster__shortcuts">
               {shortcuts}
             </ul>
@@ -87,10 +87,17 @@ export default class Home extends Component {
     return (
       <div className="home">
         <div className="container">
-          <h2 className="home__title">Sublime Text Shortcuts</h2>
-          <input type="text" className="search__input" onChange={this.searchUpdated} />
-          <div className="clusters row">
-            {clusters}
+          <div className='row row--center'>
+            <div className="col col--sm-12">
+              <h1 className="home__title">SUBLIME CUTS</h1>
+              <h2 className="home__title">CLICK BELOW AND MASTER SUBLIME TEXT SHORTCUTS</h2>
+              <div className="search__input">
+                <input type="text" onChange={this.searchUpdated} />
+              </div>
+              <div className="clusters row">
+                  {clusters}
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -316,7 +316,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Yank (inserts the text that\u2019s on top of the kill ring)"
+          "desc": "Yank"
         },
         {
           "keys": [
@@ -433,7 +433,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Delete (kill) Line"
+          "desc": "Delete Line"
         },
         {
           "keys": [
@@ -571,7 +571,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "(Previous) Move Up"
+          "desc": "Move Up"
         },
         {
           "keys": [
@@ -584,7 +584,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "(Forward) Move Right"
+          "desc": "Move Right"
         },
         {
           "keys": [
@@ -597,7 +597,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "(Next) Move Down"
+          "desc": "Move Down"
         },
         {
           "keys": [
@@ -610,7 +610,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "(Back) Move Left"
+          "desc": "Move Left"
         },
         {
           "keys": [
@@ -623,7 +623,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Transpose (swap two characters or words; buggy behaviour)"
+          "desc": "Transpose"
         },
         {
           "keys": [
@@ -736,7 +736,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Sort Lines (Case Sensitive)"
+          "desc": "Sort Lines"
         },
         {
           "keys": [
@@ -762,7 +762,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Jump to Matching Brackets (does not work with HTML/XML tags)"
+          "desc": "Jump to Matching Brackets"
         },
         {
           "keys": [
@@ -775,7 +775,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Scroll to Selection (centers the screen to cursor)"
+          "desc": "Scroll to Selection"
         },
         {
           "keys": [
@@ -872,7 +872,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Split Selection Into Lines (inserts multiple cursors)"
+          "desc": "Split Selection Into Lines"
         },
         {
           "keys": [
@@ -889,7 +889,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Add Previous/Next Line (inserts multiple cursors)"
+          "desc": "Add Previous/Next Line"
         },
         {
           "keys": [
@@ -899,7 +899,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Single Selection (when there are multiple selections; exits to visual mode first if you are in insert mode)"
+          "desc": "Single Selection"
         },
         {
           "keys": [
@@ -954,7 +954,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Expand Selection to Tag (HTML/XML)"
+          "desc": "Expand Selection to Tag"
         },
         {
           "keys": [
@@ -1111,7 +1111,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Quick Find (searches for the word under the cursor)"
+          "desc": "Quick Find"
         },
         {
           "keys": [
@@ -1127,7 +1127,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Quick Find All (selects all occurences of the word under the cursor)"
+          "desc": "Quick Find All"
         },
         {
           "keys": [
@@ -1172,7 +1172,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Find in Files (all open files)"
+          "desc": "Find in Files"
         },
         {
           "keys": [
@@ -1182,7 +1182,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Next Result (file search results)"
+          "desc": "Next Result"
         },
         {
           "keys": [
@@ -1195,7 +1195,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Previous Result (file search results)"
+          "desc": "Previous Result"
         }
       ],
       "id": 4,
@@ -1217,7 +1217,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Fold (selection)"
+          "desc": "Fold"
         },
         {
           "keys": [
@@ -1317,7 +1317,7 @@ const CLUSTERS = [
               ]
             ]
           ],
-          "desc": "Fold Tag Attributes (HTML/XML)"
+          "desc": "Fold Tag Attributes"
         }
       ],
       "id": 5,

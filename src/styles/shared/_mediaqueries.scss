@@ -1,0 +1,18 @@
+// =============================================================================
+// Mediaqueries
+// =============================================================================
+
+$min-desktop-width: 1024px;
+$min-tablet-width: 768px;
+
+@mixin desktop {
+  @media (min-width: #{$min-desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$min-tablet-width - 1px}) {
+    @content;
+  }
+}

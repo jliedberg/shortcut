@@ -1,0 +1,59 @@
+// =============================================================================
+// Reset Styles
+// =============================================================================
+body, html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+small,
+span {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+article,
+div,
+footer,
+header,
+section,
+li,
+ul,
+input,
+nav,
+form {
+  box-sizing: border-box;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+input {
+  border: none;
+  outline: none;
+}
+button {
+  border: none;
+  outline:0;
+}

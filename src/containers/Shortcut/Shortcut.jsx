@@ -6,9 +6,9 @@ import Keys from '../Keys';
 export default class Shortcut extends Component {
   render() {
     return (
-      <li>
+      <li className='shortcut'>
         <Link to={`/${this.props.cluster.id}/${this.props.shortcut.id}`} className="cluster__shortcut">
-          <Keys keys={this.props.shortcut.keys}/> - {this.props.shortcut.desc}
+          <Keys keys={this.props.shortcut.keys}/> <p className='command'>{this.props.shortcut.desc}</p>
         </Link>
       </li>
     )

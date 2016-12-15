@@ -1,0 +1,10 @@
+.search__input {
+  width: 100%;
+  padding: ($mo-section-spacing * 2) 0;
+
+  input {
+    border-radius: 3px;
+    padding: $mo-element-spacing * 1.5;
+    width: inherit;
+  }
+}

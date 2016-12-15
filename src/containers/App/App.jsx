@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 import Home from '../Home/Home'
+import Header from '../Header/Header'
 
 export default class App extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class App extends Component {
 
     return (
       <div>
+        <Header/>
         <Home/>
         <ReactCSSTransitionGroup
           transitionName="modal"
