@@ -90,9 +90,9 @@ export default class Home extends Component {
           <div className='row row--center'>
             <div className="col col--sm-12">
               <h1 className="home__title">SUBLIME CUTS</h1>
-              <h2 className="home__title">CLICK BELOW AND MASTER SUBLIME TEXT SHORTCUTS</h2>
+              <p className="home__lead">Search below and a click on a shortcut to see what it does.</p>
               <div className="search">
-                <input type="text" onChange={this.searchUpdated} className="search__input"/>
+                <input type="text" onChange={this.searchUpdated} className="search__input" placeholder="Search..."/>
               </div>
               <div className="clusters row">
                   {clusters}

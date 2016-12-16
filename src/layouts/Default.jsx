@@ -21,7 +21,7 @@ export default class Default extends Component {
     return (
       <html lang='en'>
         <head>
-          <title>Shortcut</title>
+          <title>SublimeCuts</title>
           {/* production */}
           {Object.keys(assets.styles).map((style, key) =>
             <link
@@ -30,6 +30,7 @@ export default class Default extends Component {
               rel='stylesheet' type='text/css' charSet='UTF-8'
             />
           )}
+          <meta type="description" content="A simple way to find and understand keyboard shortcuts for Sublime Text on Mac. Sometimes life gives you shortcuts."/>
           { Object.keys(assets.styles).length === 0 ? <style dangerouslySetInnerHTML={{__html: require('../styles/main.scss')._style}}/> : null }
         </head>
         <body>

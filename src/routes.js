@@ -10,7 +10,7 @@ import {
 export default () => {
   return (
     <Route path="/" component={App}>
-      <Route path=':clusterId/:shortcutId'>
+      <Route path=':clusterUrl/:shortcutUrl'>
         <IndexRoute component={ModalContainer} />
       </Route>
       <Route path='*' component={NotFound} />

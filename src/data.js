@@ -1,4 +1,4 @@
-const CLUSTERS = [
+let CLUSTERS = [
     {
       "shortcuts": [
         {
@@ -1575,4 +1575,22 @@ const CLUSTERS = [
     }
   ];
 
-export default CLUSTERS
+
+const data = CLUSTERS.map(cluster => {
+  const shortcuts = cluster.shortcuts.map(shortcut => {
+    return Object.assign({}, shortcut, {
+      url: shortcut.desc.replace(/(\s|\/)/g, '-')
+        .replace(/\(.*\)/g, '')
+        .replace(/(^\-+|\-+$)/, '')
+        .toLowerCase()
+    });
+  });
+  return Object.assign({}, cluster, {
+    url: cluster.name.replace(/(\s|\/)/g, '-')
+      .replace(/\-+/g, '-')
+      .toLowerCase(),
+    shortcuts: shortcuts
+  });
+});
+
+export default data;

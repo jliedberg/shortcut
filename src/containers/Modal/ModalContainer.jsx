@@ -7,10 +7,13 @@ import CLUSTERS from '../../data'
 
 export default class ModalContainer extends Component {
   render() {
-    const clusterId = parseInt(this.props.params.clusterId);
-    const shortcutId = parseInt(this.props.params.shortcutId);
-    let shortcut = CLUSTERS[clusterId].shortcuts[shortcutId];
+    const cluster = CLUSTERS.filter(cluster => {
+      return cluster.url === this.props.params.clusterUrl;
+    })[0];
+    const shortcut = cluster.shortcuts.filter(shortcut => {
+      return shortcut.url === this.props.params.shortcutUrl;
+    })[0];
 
-    return <Modal data={shortcut}/>;
+    return <Modal shortcut={shortcut}/>;
   }
 }
