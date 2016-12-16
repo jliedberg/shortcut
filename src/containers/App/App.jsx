@@ -9,7 +9,7 @@ export default class App extends Component {
      (child, i) => React.cloneElement(child, {
        key: i
      })
-    )
+    );
 
     return (
       <div>
@@ -28,4 +28,4 @@ export default class App extends Component {
 
 App.propTypes = {
   children: React.PropTypes.any
-}
+};

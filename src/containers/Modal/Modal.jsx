@@ -1,4 +1,5 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import {Link} from 'react-router';
 
 import Keys from '../Keys';
 
@@ -9,12 +10,21 @@ export default class Modal extends Component {
       .replace(/(^\-+|\-+$)/, '')
       .toLowerCase();
     return (
-      <div className='modal'>
-        <h1><Keys keys={this.props.data.keys}/></h1>
-        <h3>{this.props.data.desc}</h3>
-        <video autoPlay loop>
-          <source src={`/videos/${videoName}.mp4`} type="video/mp4"/>
-        </video>
+      <div className="modal">
+        <Link to="/" className="modal__backdrop"/>
+        <div className="modal__dialog">
+          <div className="modal__text">
+            <Keys keys={this.props.data.keys}/>
+            <span className="modal__command">{this.props.data.desc}</span>
+          </div>
+          <div className="modal__video">
+            <div className="modal__video-crop">
+              <video autoPlay loop>
+                <source src={`/videos/${videoName}.mp4`} type="video/mp4"/>
+              </video>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
