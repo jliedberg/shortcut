@@ -14,7 +14,7 @@ export default class Modal extends Component {
           <div className='col col--sm-5 text__container'>
             <div className='text__inner'>
               <Keys keys={this.props.data.keys}/>
-              <span className='purpose'>{this.props.data.desc}</span>
+              <span className='command'>{this.props.data.desc}</span>
             </div>
           </div>
           <div className='col col--sm-7 video__container'>

@@ -1,9 +1,8 @@
 // =============================================================================
-// Spacings
+// Layout
 // =============================================================================
-
-// Components
-$mo-element-spacing: 15px;
-
-// Section
-$mo-section-spacing: 30px;
+.container {
+  padding: 0 15px;
+  max-width: 940px;
+  margin: auto;
+}

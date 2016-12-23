@@ -4,13 +4,15 @@
 // Variables
 $font__stack: 'Quantico', sans-serif;
 
+$font-size__base: 16px;
+
 
 // =============================================================================
 // General styles related to text
 // =============================================================================
 body, html {
   font-family: $font__stack;
-  font-size: 10px;
+  font-size: $font-size__base;
   color: $font__color;
 }
 
@@ -19,60 +21,34 @@ h2,
 h3,
 h4,
 h5 {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: 3rem;
-  color: $color__primary;
-  font-weight: 700;
-
-  @include tablet {
-    font-size: 4.8rem;
-  }
-}
-
-h2 {
-  font-size: 3rem;
-
-  @include tablet {
-    font-size: 2rem;
-  }
+  font-size: 1.625rem;
 }
 
 h3 {
-  font-size: 2rem;
-
-  @include tablet {
-    font-size: 2rem;
-  }
-}
-
-h4 {
-  font-size: 1.6rem;
-
-  @include tablet {
-    font-size: 1.6rem;
-  }
+  font-size: 1.125rem;
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1rem;
   line-height: 1.8;
 }
 
 a {
-  font-size: 1.6rem;
+  font-size: 1rem;
   color: inherit;
   text-decoration: none;
 }
 
 input {
-  font-size: 1.6rem;
+  font-size: 1rem;
 }
 
 small, label {
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 1.5px;
 }

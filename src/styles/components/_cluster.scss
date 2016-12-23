@@ -6,39 +6,10 @@
   }
 
   .cluster {
-    padding: $mo-section-spacing * 1.5 ($mo-section-spacing * .75);
-    border-bottom: 1px solid rgba(0,0,0,.12);
-    border-left: 1px solid rgba(0,0,0,.12);
-
+    margin-bottom: $mo-section-spacing;
     .cluster__name {
-      margin-bottom: $mo-header-spacing;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .shortcut {
-      padding: $mo-element-spacing;
+      color: $color__gray;
       margin-bottom: $mo-element-spacing;
-      border-radius: 3px;
-
-      &:hover {
-        background-color: rgba(0,0,0,.15);
-      }
-
-      a {
-        display: block;
-
-        .keys {
-          margin-bottom: $mo-element-spacing / 2;
-          .key {
-            display: inline-block;
-            margin-right: $mo-element-spacing / 2;
-            padding: $mo-element-spacing / 2;
-            background-color: #888;
-            border-radius: 3px;
-          }
-        }
-      }
     }
   }
 }

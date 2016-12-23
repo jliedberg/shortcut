@@ -1,0 +1,60 @@
+.shortcut {
+  margin-bottom: $mo-element-spacing;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 3px;
+  position: relative;
+  transition-property: color,background-color,box-shadow,transform;
+  transition-duration: .15s;
+
+  &:hover {
+    background-color: rgba(0,0,0,.15);
+    box-shadow: 0 15px 35px rgba(50,50,93,.07), 0 5px 15px rgba(0,0,0,.07);
+
+    .key {
+      background-color: $color__primary !important;
+    }
+
+    .video__icon {
+      opacity: 1;
+      path {
+        fill: $color__primary;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    padding: $mo-element-spacing;
+
+    .keys {
+      margin-bottom: $mo-element-spacing / 3;
+      .key {
+        font-size: .875rem;
+        display: inline-block;
+        margin-right: $mo-element-spacing / 3;
+        padding: $mo-element-spacing / 3;
+        background-color: #888;
+        border-radius: 3px;
+      }
+    }
+
+    .command {
+      max-width: calc(100% - 50px);
+    }
+
+    .video__icon {
+      height: 26px;
+      width: 26px;
+      opacity: .4;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 10px;
+      bottom: 0;
+
+      path {
+        fill: #888;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:700');
+
+.home {
+  padding-top: $mo-section-spacing;
+  padding-bottom: ($mo-section-spacing * 2);
+
+  .home__icons {
+    text-align: center;
+    margin-bottom: $mo-section-spacing;
+    color: rgba(0,0,0,.15);
+
+    span {
+      font-size: 30px;
+      margin-right: $mo-element-spacing;
+      margin-left: $mo-element-spacing;
+      font-weight: 600;
+      vertical-align: middle;
+    }
+
+    .sublime__icon, .video__icon {
+      width: 64px;
+      height: 64px;
+      vertical-align: middle;
+    }
+  }
+
+  .home__title {
+    text-align: center;
+  }
+
+  .home__search {
+    padding-top: $mo-section-spacing;
+    padding-bottom: ($mo-section-spacing * 2);
+  }
+}

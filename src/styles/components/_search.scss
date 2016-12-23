@@ -1,10 +1,14 @@
 .search__input {
   width: 100%;
-  padding: ($mo-section-spacing * 2) 0;
 
   input {
+    font-family: "Quantico", sans-serif;
     border-radius: 3px;
-    padding: $mo-element-spacing * 1.5;
+    padding: $mo-element-spacing;
     width: inherit;
+    background-image: url('../../public/icons/search-icon.svg');
+    background-size: auto calc(100% - 30px);
+    background-repeat: no-repeat;
+    background-position: right $mo-element-spacing center;
   }
 }

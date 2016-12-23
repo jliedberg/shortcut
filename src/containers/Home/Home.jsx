@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import Minigrid from 'minigrid';
 
-import Shortcut from '../Shortcut/Shortcut';
+import VideoIcon from '../../components/Icons/VideoIcon'
+import SublimeIcon from '../../components/Icons/SublimeIcon'
+import Shortcut from '../../components/Shortcut/Shortcut';
+
 import CLUSTERS from '../../data';
 
 export default class Home extends Component {
@@ -89,10 +92,14 @@ export default class Home extends Component {
         <div className="container">
           <div className='row row--center'>
             <div className="col col--sm-12">
-              <h1 className="home__title">SUBLIME CUTS</h1>
-              <h2 className="home__title">CLICK BELOW AND MASTER SUBLIME TEXT SHORTCUTS</h2>
-              <div className="search__input">
-                <input type="text" onChange={this.searchUpdated} />
+              <div className='home__icons'>
+                <SublimeIcon className='sublime__icon'/>
+                <span>+</span>
+                <VideoIcon className='video__icon'/>
+              </div>
+              <h1 className="home__title">Demo videos for Sublime Text shortcuts Mac</h1>
+              <div className="home__search search__input">
+                <input type="text" placeholder="Search" onChange={this.searchUpdated} />
               </div>
               <div className="clusters row">
                   {clusters}

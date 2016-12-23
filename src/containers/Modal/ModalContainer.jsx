@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router'
 
-import Modal from './Modal'
+import Modal from '../../components/Modal/Modal'
 
 import CLUSTERS from '../../data'
 
@@ -13,7 +13,13 @@ export default class ModalContainer extends Component {
 
     return (
       <div className='modal__container'>
-        <Modal data={shortcut}/>
+        <div className='container'>
+          <div className='row row--center'>
+            <div className='col col--sm-12'>
+              <Modal data={shortcut}/>
+            </div>
+          </div>
+        </div>
         <Link to='/'><div className='return'></div></Link>
       </div>
     )

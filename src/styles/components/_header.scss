@@ -1,0 +1,13 @@
+.global__header {
+  font-size: .875rem;
+  padding: $mo-element-spacing;
+
+  .logo__link {
+    color: $color__primary;
+    font-weight: 700;
+  }
+
+  .about__link {
+    float: right;
+  }
+}

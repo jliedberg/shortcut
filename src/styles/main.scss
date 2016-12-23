@@ -3,30 +3,11 @@
 
 @import "shared/hive";
 @import "components/hive";
+@import "views/hive";
 
 body {
   color: $font__color;
   background-color: $color__brow-gray;
-}
-
-.container {
-  padding: 0 15px;
-  max-width: 940px;
-  margin: auto;
-}
-
-.home {
-  color: #fff;
-  padding: 100px 0;
-}
-
-.home__title {
-  text-align: center;
-}
-
-.cluster__name {
-  color: #888;
-  font-weight: 400;
 }
 
 // Modal
